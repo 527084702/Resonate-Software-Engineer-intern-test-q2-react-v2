@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/527084702/Resonate-Software-Engineer-intern-test-q2-react",
   "name": "my-react-test-v2",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +23,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
