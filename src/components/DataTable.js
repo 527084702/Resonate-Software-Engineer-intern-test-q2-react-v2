@@ -1,82 +1,94 @@
 import React, { useState, useEffect } from 'react'
-import { DataGrid , GridValueGetterParams} from '@mui/x-data-grid';
-import { makeStyles } from '@mui/material/styles';
-import { createTheme } from '@mui/material/styles';
+import { DataGrid } from '@mui/x-data-grid';
 import Box from "@mui/material/Box";
+//import { makeStyles } from '@mui/material/styles';
+//import { createTheme } from '@mui/material/styles';
+//import Avatar from '@mui/material/Avatar';
+
+
+//Format table elements
 const columns = [
+
   /*{
     field: 'first',
-    headerClassName: 'super-app-theme--header',
+    headerClassName: 'app-theme-header',
     headerAlign: 'center',
     width: 140,
   } */
   {
     field: 'id',
     headerName: 'ID',
-    headerClassName: 'super-app-theme--header',
-    width: 50
+    headerClassName: 'app-theme-header',
+    width: 50,
   },
   {
     field: 'name',
     headerName: 'Name',
     //headerAlign: 'center',
-    headerClassName: 'super-app-theme--header',
-    width: 160
+    headerClassName: 'app-theme-header',
+    width: 160,
   },
   {
     field: 'username',
     headerName: 'Uername',
-    headerClassName: 'super-app-theme--header',
-    width: 150
+    headerClassName: 'app-theme-header',
+    width: 150,
+    /*renderCell: (params)=>{
+      return (
+        <>
+            <Avatar src={params.value.avatar} />
+        </>
+      )
+    }*/ //test for Avatar Function
   },
   {
     field: 'address',
     headerName: 'Address',
-    headerClassName: 'super-app-theme--header',
-    width: 400,
+    headerClassName: 'app-theme-header',
+    width: 420,
     valueGetter: (function (params) {
-      return "".concat(params.row.address.suite || '', " ") + "  " +  
-             "".concat(params.row.address.street || '') + "  " +  
-             "".concat(params.row.address.city || '') + "  " +  
-             "".concat(params.row.address.zipcode || '');
-      //return params.row.address.street + "  -  " +  params.row.phone;
-  })
+      return "".concat(params.row.address.suite || '', " ") + " , " +
+        "".concat(params.row.address.street || '') + " , " +
+        "".concat(params.row.address.city || '') + "  " +
+        "".concat(params.row.address.zipcode || '');
+    })
   },
   {
     field: 'address geo',
     headerName: 'Address Lat/Long ',
-    headerClassName: 'super-app-theme--header',
+    headerClassName: 'app-theme-header',
     width: 180,
     valueGetter: (function (params) {
-      return "".concat(params.row.address.geo.lat || '', " ") + " , " +  
-             "".concat(params.row.address.geo.lng || '');
-  })
+      return "".concat(params.row.address.geo.lat || '', " ") + " , " +
+        "".concat(params.row.address.geo.lng || '');
+    })
   },
   {
     field: 'phone',
     headerName: 'Phone number',
-    headerClassName: 'super-app-theme--header',
+    headerClassName: 'app-theme-header',
     width: 200
   },
   {
     field: 'website',
     headerName: 'Website',
-    headerClassName: 'super-app-theme--header',
+    headerClassName: 'app-theme-header',
     width: 150
   },
   {
     field: 'company',
     headerName: 'Company detail',
-    headerClassName: 'super-app-theme--header',
-    width: 700,
+    headerClassName: 'app-theme-header',
+    width: 800,
     valueGetter: (function (params) {
-      return "".concat(params.row.company.name || '', " ") + " - " +  
-             "".concat(params.row.company.catchPhrase|| '') + " - " +  
-             "".concat(params.row.company.bs || '');
-  })
+      return " Name: " + "".concat(params.row.company.name || '', " ") + " , " +
+        " Catchphrase: " + "".concat(params.row.company.catchPhrase || '') + " , " +
+        " BS: " + "".concat(params.row.company.bs || '');
+    })
   },
 ];
 
+//start loading the data into tableData
 const DataTable = () => {
 
   const [tableData, setTableData] = useState([])
@@ -85,30 +97,27 @@ const DataTable = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((data) => data.json())
       .then((data) => setTableData(data))
-
   }, [])
 
   console.log(tableData);
 
   return (
-
-    <div style={{ height: 600, width: '100%'}}>
+    <div style={{ height: 600, width: '100%' }}>
       <Box
         sx={{
-          height: 400,
+          height: 390,
           width: 1, //100%
-          "& .super-app-theme--header": {
+          "& .app-theme-header": {
             backgroundColor: "#1565c0",
             color: "white"
           }
         }}
       >
         <DataGrid
-          rows={tableData }
+          rows={tableData}
           columns={columns}
           pageSize={5}
           rowsPerPageOptions={[5]}
-        //checkboxSelection
         />
       </Box>
     </div>
