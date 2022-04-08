@@ -94,6 +94,7 @@ const DataTable = () => {
   const [tableData, setTableData] = useState([])
 
   useEffect(() => {
+    document.title = "Question 2: Real world problem"
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((data) => data.json())
       .then((data) => setTableData(data))
