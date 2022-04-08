@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/527084702/Resonate-Software-Engineer-intern-test-q2-react/static/css/main.abd64e84.css",
-    "main.js": "/527084702/Resonate-Software-Engineer-intern-test-q2-react/static/js/main.8cbdcd5e.js",
-    "static/js/787.df226a74.chunk.js": "/527084702/Resonate-Software-Engineer-intern-test-q2-react/static/js/787.df226a74.chunk.js",
-    "index.html": "/527084702/Resonate-Software-Engineer-intern-test-q2-react/index.html",
-    "main.abd64e84.css.map": "/527084702/Resonate-Software-Engineer-intern-test-q2-react/static/css/main.abd64e84.css.map",
-    "main.8cbdcd5e.js.map": "/527084702/Resonate-Software-Engineer-intern-test-q2-react/static/js/main.8cbdcd5e.js.map",
-    "787.df226a74.chunk.js.map": "/527084702/Resonate-Software-Engineer-intern-test-q2-react/static/js/787.df226a74.chunk.js.map"
+    "main.css": "/Resonate-Software-Engineer-intern-test-q2-react-v2/static/css/main.abd64e84.css",
+    "main.js": "/Resonate-Software-Engineer-intern-test-q2-react-v2/static/js/main.44ede283.js",
+    "static/js/787.df226a74.chunk.js": "/Resonate-Software-Engineer-intern-test-q2-react-v2/static/js/787.df226a74.chunk.js",
+    "index.html": "/Resonate-Software-Engineer-intern-test-q2-react-v2/index.html",
+    "main.abd64e84.css.map": "/Resonate-Software-Engineer-intern-test-q2-react-v2/static/css/main.abd64e84.css.map",
+    "main.44ede283.js.map": "/Resonate-Software-Engineer-intern-test-q2-react-v2/static/js/main.44ede283.js.map",
+    "787.df226a74.chunk.js.map": "/Resonate-Software-Engineer-intern-test-q2-react-v2/static/js/787.df226a74.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.8cbdcd5e.js"
+    "static/js/main.44ede283.js"
   ]
 }
