@@ -19,7 +19,7 @@ const columns = [
     field: 'id',
     headerName: 'ID',
     headerClassName: 'app-theme-header',
-    width: 50,
+    width: 80,
   },
   {
     field: 'name',
