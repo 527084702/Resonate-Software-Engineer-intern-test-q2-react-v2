@@ -9,6 +9,8 @@ Write a responsive “Contacts” application that allows the user to browse the
 # This project is built with React and Material-UI(React component library)
 The dataTable.js in the components folder is the main JavaScript file which contain all functions.
 
+# npm 'install @mui/material @emotion/react @emotion/styled'
+install the Material-UI(React component library)
 
 # Getting Started with Create React App
 
